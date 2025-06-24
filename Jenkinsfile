@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Images') {
             steps {
                 // Build Docker image sesuai docker-compose.yml
-                sh 'docker-compose build'
+                sh 'docker compose build'
             }
         }
 
