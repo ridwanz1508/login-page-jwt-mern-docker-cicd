@@ -2,21 +2,33 @@ pipeline {
     agent any
 
     stages {
-        stage('Build Docker Images') {
+        stage('Checkout') {
             steps {
-                sh 'docker compose build'
+                checkout scm
             }
         }
+
+        stage('Build Docker Images') {
+            steps {
+                echo 'Membangun Docker image...'
+                sh 'docker-compose build'
+            }
+        }
+
         stage('Start Containers') {
             steps {
-                sh 'docker compose up -d'
+                echo 'Menjalankan container Docker...'
+                sh 'docker-compose up -d'
             }
         }
     }
 
     post {
+        success {
+            echo 'Build berhasil! Container sudah jalan.'
+        }
         failure {
-            echo 'Build gagal, cek log console!'
+            echo 'Build gagal, silakan cek log console.'
         }
     }
 }
