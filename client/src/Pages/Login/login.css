@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+}
+  
+/* --- Login --- */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../assets/images/bg-login-1.jpg);
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.login-form {
+    padding: 20px;
+    background-color: #444242; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px; 
+    min-width: 300px;
+    margin: 0 10px; 
+}
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #faf6f6; 
+    text-align: center;
+    text-decoration: underline solid 2px rgb(253, 251, 251);
+}
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%; 
+}
+.login-form input {
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+.login-label {
+    position: absolute;
+    right: 10px;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #666363;
+    padding: 0 5px;
+    border-radius: 4px;
+}
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #242527; 
+    color: #fff; 
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.login-form button:hover {
+    background-color: #717375; 
+}
+.login-text {
+    font-size: 12px;
+    text-align: end;
+    padding-right: 5px;
+    color: #faf6f6;
+}
+.login-text span {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #faf6f6;
+}
+.login-text span:hover {
+    color: rgb(97, 97, 224);
+}

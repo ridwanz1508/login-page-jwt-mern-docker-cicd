@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 9999; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.nav-logo a {
+    cursor: pointer;
+    color: #7e7712;
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 24px;
+}
+.nav-search {
+    background-color: #7e7712;
+    display: flex;
+    justify-content: center; 
+    flex: 1;
+    padding: 5px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 50px; 
+}
+.nav-search-menu {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px; 
+    transition: border-color 0.3s, box-shadow 0.3s; 
+    font-size: 14px; 
+    padding-right: 30px;
+}
+.nav-search-menu:focus {
+    border-color: #ff9800; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    outline: none; 
+}
+.nav-search-menu::placeholder {
+    color: #aaa; 
+    font-style: italic; 
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+.nav-menu a {
+    color: #7e7712; 
+    text-decoration: none; 
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+.nav-menu a:hover {
+    color: #a19f9f; 
+}
+.nav-btn-logout {
+    background: none;
+    border: none;
+    color: #7e7712; 
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+.nav-btn-logout:hover {
+    color: #868282; 
+}
+.nav-menu a svg,
+.nav-btn-logout svg {
+    margin-right: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-logo {
+        margin-bottom: 5px;
+    }
+    .nav-search {
+        width: 88%;
+        margin: 10px 0; 
+    }
+    .nav-menu {
+        width: 90%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .nav-menu a,
+    .nav-btn-logout {
+        margin-right: 10px;
+    }
+    .nav-menu a:last-child,
+    .nav-btn-logout {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-search {
+        margin: 5px 0;
+    }
+    .nav-menu a,
+    .nav-btn-logout {
+        margin: 5px 0;
+    }
+}
